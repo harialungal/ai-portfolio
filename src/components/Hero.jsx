@@ -4,62 +4,95 @@ import { Download, ArrowRight } from 'lucide-react';
 import { Link } from 'react-scroll';
 
 const Hero = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+            },
+        },
+    };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-  };
+    const itemVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    };
 
-  return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-6">
-      <motion.div 
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="text-center max-w-4xl mx-auto"
-      >
-        <motion.div variants={itemVariants} className="inline-block mb-4 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
-          Available for new opportunities
-        </motion.div>
+    return (
+        <section id="hero" className="min-h-screen flex items-center justify-center pt-24 pb-12 px-6">
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center"
+            >
+                {/* Left side: Text Content */}
+                <div className="text-center lg:text-left order-2 lg:order-1">
+                    <motion.div variants={itemVariants} className="inline-block mb-6 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
+                        Available for new opportunities
+                    </motion.div>
 
-        <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 text-white tracking-tight leading-tight">
-          Harikrishna <br className="md:hidden" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-300">
-            Alungal Prakas
-          </span>
-        </motion.h1>
+                    <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-8 text-white tracking-tight leading-tight">
+                        Harikrishna <br className="hidden lg:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-300">
+                            Alungal Prakas
+                        </span>
+                    </motion.h1>
 
-        <motion.h2 variants={itemVariants} className="text-xl md:text-2xl text-slate-400 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-          AI/ML Engineer <span className="opacity-50 mx-2">|</span> Data Science Enthusiasts
-        </motion.h2>
+                    <motion.h2 variants={itemVariants} className="text-xl md:text-2xl text-slate-400 font-light mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        AI/ML Engineer <span className="opacity-50 mx-2">|</span> Data Science Enthusiasts
+                    </motion.h2>
 
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a 
-            href="/resume.pdf" 
-            download 
-            className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-primary hover:bg-primaryHover text-white px-8 py-3.5 rounded-full transition-all duration-300 shadow-glow font-medium group text-center"
-          >
-            <span>Download Resume</span>
-            <Download size={18} className="group-hover:-translate-y-1 transition-transform" />
-          </a>
-          
-          <Link to="contact" smooth={true} duration={800} className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-surface hover:bg-surfaceHover border border-glassBorder text-slate-200 px-8 py-3.5 rounded-full transition-all duration-300 font-medium group cursor-pointer">
-            <span>Contact Me</span>
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
-      </motion.div>
-    </section>
-  );
+                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a
+                            href="/resume.pdf"
+                            download
+                            className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-primary hover:bg-primaryHover text-white px-8 py-4 rounded-full transition-all duration-300 shadow-glow font-medium group text-center"
+                        >
+                            <span>Download Resume</span>
+                            <Download size={18} className="group-hover:-translate-y-1 transition-transform" />
+                        </a>
+
+                        <Link to="contact" smooth={true} duration={800} className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-surface hover:bg-surfaceHover border border-glassBorder text-slate-200 px-8 py-4 rounded-full transition-all duration-300 font-medium group cursor-pointer">
+                            <span>Contact Me</span>
+                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    </motion.div>
+                </div>
+
+                {/* Right side: Profile Photo */}
+                <motion.div
+                    variants={itemVariants}
+                    className="order-1 lg:order-2 flex justify-center items-center"
+                >
+                    <div className="relative group">
+                        {/* Glowing Background Blur */}
+                        <div className="absolute -inset-4 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all duration-500 opacity-70"></div>
+                        
+                        {/* Floating Image Container */}
+                        <motion.div
+                            animate={{ y: [0, -15, 0] }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px] rounded-full p-2 bg-gradient-to-br from-primary/40 to-indigo-500/20 border border-white/10 overflow-hidden shadow-2xl"
+                        >
+                            <img
+                                src="/profile.jpeg"
+                                alt="Harikrishna Alungal Prakas"
+                                className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-700 grayscale-[20%] group-hover:grayscale-0"
+                            />
+                        </motion.div>
+
+                        {/* Tech Stack Overlay (Subtle) */}
+                        <div className="absolute -bottom-4 -left-4 bg-surface/80 backdrop-blur-md border border-glassBorder p-4 rounded-2xl shadow-xl hidden md:block">
+                            <p className="text-xs font-bold text-primary uppercase mb-1">Expertise</p>
+                            <p className="text-sm font-medium text-white">AI / Machine Learning</p>
+                        </div>
+                    </div>
+                </motion.div>
+            </motion.div>
+        </section>
+    );
 };
 
 export default Hero;
