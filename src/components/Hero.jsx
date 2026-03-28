@@ -39,7 +39,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.h2 variants={itemVariants} className="text-xl md:text-2xl text-slate-400 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-          AI/ML Engineer <span className="opacity-50 mx-2">|</span> Voicebot Developer
+          AI/ML Engineer <span className="opacity-50 mx-2">|</span> Data Science Enthusiasts
         </motion.h2>
 
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4">

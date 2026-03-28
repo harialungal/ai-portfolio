@@ -20,7 +20,7 @@ const About = () => {
           </h3>
           
           <p className="text-xl md:text-3xl text-slate-300 leading-relaxed font-light tracking-wide text-balance">
-            Computer Science postgraduate specializing in <strong className="font-semibold text-white">AI, ML, and Data Science</strong> with experience in <span className="text-indigo-300">NLP, TTS, and ASR</span> voicebot development.
+            Computer Science postgraduate specializing in <strong className="font-semibold text-white">AI, ML, and Data Science</strong> with experience in <span className="text-indigo-300">NLP, TTS, and ASR</span> for Data Science Enthusiasts.
           </p>
         </motion.div>
       </div>

@@ -5,7 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "AI Voicebot Platform",
+      title: "Conversational AI Platform",
       desc: "An advanced, fully integrated conversational agent capable of understanding contextual logic dynamically and outputting highly accurate spoken language.",
       techStack: ["NLP", "TTS", "ASR", "Python", "React"],
       imagePlaceholder: "bg-gradient-to-br from-primary/20 to-indigo-900/40"
