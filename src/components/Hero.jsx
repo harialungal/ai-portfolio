@@ -27,7 +27,7 @@ const Hero = () => {
                     <img
                         src="/profile.jpeg"
                         alt="Integrated Profile Highlight"
-                        className="w-full h-full object-cover object-center scale-110 grayscale-[30%] blur-[2px] md:blur-0"
+                        className="w-full h-full object-contain scale-95 translate-y-[10%] grayscale-[20%] blur-[1px] md:blur-0"
                         style={{
                             maskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 15%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0) 80%)',
                             WebkitMaskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 15%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0) 80%)',
