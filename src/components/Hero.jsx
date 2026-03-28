@@ -43,10 +43,14 @@ const Hero = () => {
         </motion.h2>
 
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-primary hover:bg-primaryHover text-white px-8 py-3.5 rounded-full transition-all duration-300 shadow-glow font-medium group">
+          <a 
+            href="/resume.pdf" 
+            download 
+            className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-primary hover:bg-primaryHover text-white px-8 py-3.5 rounded-full transition-all duration-300 shadow-glow font-medium group text-center"
+          >
             <span>Download Resume</span>
             <Download size={18} className="group-hover:-translate-y-1 transition-transform" />
-          </button>
+          </a>
           
           <Link to="contact" smooth={true} duration={800} className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-surface hover:bg-surfaceHover border border-glassBorder text-slate-200 px-8 py-3.5 rounded-full transition-all duration-300 font-medium group cursor-pointer">
             <span>Contact Me</span>
